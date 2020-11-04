@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>Form practice</title>
+
+ <!-- This will be the CSS for darkmode -->
+ <style>
+body {
+  padding: 25px;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+}
+</style>
+<!-- dark mode script ends here -->
+
+
+
+
+ <!-- This will to make image in center -->
+ <style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+</style>
+<!-- Image center class ends here -->
+
+
+
+ <!--  THIS IS WHERE GLOWING BUTTON STYLE/CSS STARTS       -->
+  <style>
+   /* THIS IS WHERE I AM GOING TO INSERT CSS OF RAINBOW BUTTON    */ 
+   
+.glow-on-hover {
+    width: 110px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+    
+</style>        <!--  THIS IS WHERE GLOWING BUTTON STYLE/CSS ENDS       -->
+    
+
+
+
+<style>              <!--  TABLE CSS     -->
+table, th {
+  border: 1px white;                        <!-- CSS here is used for "table" and "tag- th" to tell the browser that - table and headline is solid black in color and needs to be 1 pixel wide    -->
+}
+th:hover {background-color:cyan;}       
+
+
+ td {
+  border: 1px solid red;                            <!-- CSS again here is used for "tag- td" to tell the browser that - All the data is solid red in color and needs to be 1 pixel wide    -->
+
+}
+td:hover {background-color:yellow;}        <!-- This will show yellow hover while mouse moves in TABLE DATA -->
+</style>
+
+
+</head>
+
+
+
+
+<body>
+<a name="topscroll"></a>
+<img src="galaxy.jpg" class="center" alt="Top pic"  name="galaxy" height="350">
+<h1 align=center style="color:Purple" ><u>This website was hosted under the supervision  of AVI SIR.</u></h1>
+<marquee style="color:gold">MY NAME IS ABHAY</MARQUEE>
+
+<h4 align=center style="color:red" >Required fields have " * " , make sure to fill it :-</h4>
+	
+	
+<form method="GET" action="mobile.php"  align=center>
+  <label for="fname" style="font-size:20px;"><b>Username:*</b></label>
+  <input type="text" id="fname" name="fname" required style="font-size:25px;"><br><br>
+  
+ <label for="pswd" style="font-size:20px;"><b>&nbsp; Password:*</b></label>
+  <input type="password" id="pass" name="pass" required style="font-size:25px;"><br><br>
+  
+   <label for="rndm" style="font-size:20px;"><b>&nbsp; Random id:</b></label>
+  <input type="password" id="pass" name="pass" required style="font-size:25px;"><br><br>
+  
+  <h3 align=center style="color:Grey" >Please choose your Gender:-</h3>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label>
+  
+  <br><br>
+  
+  
+    <label for="continent" align=center style="color:Grey; font-size:30px; font-weight:bold;">Choose your continent:</label>
+
+<select name="continent" id="continent">
+  <option value="Asia">Asia</option>
+  <option value="Africa">Africa</option>
+  <option value="North America">North America</option>
+  <option value="South America">South America</option>
+  <option value="Antarctica">Antarctica</option>
+  <option value="Europe">Europe</option>
+  <option value="Australia">Australia</option>
+</select>
+  
+  
+  
+  
+  
+  <br><br>
+    <label for="birthday" align=center style="color:Grey; font-size:30px; font-weight:bold;">Choose your Birth date:</label>
+  <input type="date" id="birthday" name="birthday"><br>
+  <label for="submissiontime" align=center style="color:Grey; font-size:30px; font-weight:bold;">Choose the date and time while you are submitting this form-</label>
+  <input type="datetime-local" id="submissiontime" name="submissiontime">
+  
+  <h3 align=center style="color:Grey" required>Enter your email :-</h3>
+  <input type="email" id="email" name="email" required style="font-size:25px;" value="@gmail.com">
+  
+  
+  
+    <h3 align=center style="color:Grey" >Please choose the things that you have at your home:-</h3>
+  <input type="checkbox" id="stuff1" name="stuff1" value="tv">
+  <label for="stuff1"> I have a TV</label><br>
+  
+  <input type="checkbox" id="stuff2" name="stuff2" value="Car">
+  <label for="stuff2"> I have a car</label><br>
+  
+  <input type="checkbox" id="stuff3" name="stuff3" value="Laptop">
+  <label for="stuff3"> I have a laptop</label><br>
+  
+  <input type="checkbox" id="stuff4" name="stuff4" value="Mobile">
+  <label for="stuff4"> I have a Mobile </label><br>
+  
+   <h3 align=center style="color:Grey" >Please choose your favorite color :-</h3>
+   <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" value="#ff0000"> 
+  <br><br><br>
+  
+  
+  
+  
+  <!--  Table starts from here      -->
+ 
+ 
+  <table align=center> 
+  <tr>
+   <th colspan="4" ><h2 align=center style="color:green" >Please type the entries:-</h2></th> 
+   </tr>
+  
+  <tr>
+   <td align=center class="glow-on-hover">Your favorite food-</td>
+    <td align=center style="color:Grey" >
+      <textarea id="comment" name="mycomment" rows="4" cols="50" placeholder="Fav food"> My favorite food is -
+      </textarea>
+    </td>    <!-- Here colspan="2" means that "Abhay" will take 2 lines of column , Rowspan tells that it also will take 2 lines of row , Align tells it needs to be in center ,  -->
+</tr>
+
+<tr>
+   <td align=center class="glow-on-hover">Your favorite sport-</td>
+   <td align=center style="color:Green" ><textarea placeholder="Write your favorite sport here" id="commen" name="mycommen" rows="4" cols="50">
+</textarea></td>    <!-- Here colspan="2" means that "Abhay" will take 2 lines of column , Rowspan tells that it also will take 2 lines of row , Align tells it needs to be in center ,  -->
+</tr>
+   </table>
+  <!--  Table ends here      -->  
+   
+   
+   
+  <h3 align=center style="color:Grey">Please enter the 14 digit id number</h3>
+   <input type="tel" name="aadhar" id="aadhar" maxlength="14"  value="123" style="font-size:25px;">
+   
+   <br><br><br>
+  
+    
+  <!--  RANGE STARTS HERE      -->
+  <label for="Family">How many family members do you have at Home</label>
+  <input type="range" min="4" max="12" name="family" id="family" value="8" onchange="rangevalue.value=value" > </input>
+  <output id="rangevalue">8</output>
+  <!--  RANGE ENDS HERE      -->
+    
+	
+	<br><br>
+	<!--  IFRAME STARTS HERE      -->
+  <hr color="#48bf91"align="center" width="50%">
+  <h3 align=center style="color:Grey">Here is the an important table below using &lt;iframe&gt; tag :-
+  </h3>
+  <iframe src="table.html" width="70%" height="220px">      
+  </iframe>
+  <hr color="#48bf91"align="center" width="50%">
+  <br><br>
+    <!--  IFRAME ENDS HERE      -->
+
+
+  
+  <!--   "SUBMIT " BUTTON  HTML CODE FROM HERE      -->
+  <div>
+  <button type="submit" class="glow-on-hover" value="Submit" onclick="alert('Thank you for submitting your form')" width="20px">Submit</button>
+   </div>
+    <!--   "SUBMIT " BUTTON  HTML CODE ENDS FROM HERE      -->
+  
+  
+  <br> <br>
+   <!--   "RESET " BUTTON  HTML CODE FROM HERE      -->
+   <b align=center style="color:red" >NOTE:-</b>
+   <b align=center style="color:solid black" >If you filled the form incorrectly, please reset:-</b><br>
+  
+<div><button class="glow-on-hover" type="reset">Reset Form</button></div>
+ <!--   "RESET " BUTTON  HTML CODE FROM HERE      -->
+</form>
+   
+	<a align="center" href="#topscroll" class="glow-on-hover">Go to top</a>
+
+
+
+</body>
+</html>
